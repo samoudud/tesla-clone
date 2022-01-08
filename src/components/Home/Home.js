@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Section from '../Section/Section';
 
 const Home = () => {
-    const [carInfo, setCarInfo] = useState([]);
+    /* const [carInfo, setCarInfo] = useState([]);
     useEffect(() => {
         fetch('/carInfo.json')
             .then(res => res.json())
             .then(data => setCarInfo(data))
-    }, [])
+    }, []) */
     return (
         <Container>
             {/* {
@@ -64,4 +64,5 @@ export default Home;
 
 const Container = styled.div`
     height: 100vh;
+    z-index: 10;
 `

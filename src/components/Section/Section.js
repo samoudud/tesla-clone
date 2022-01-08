@@ -1,26 +1,31 @@
 import React from 'react';
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
 
 const Section = ({ title, description, backgroundImg, leftBtnText, rightBtnText }) => {
     return (
         <Warp bgImage={backgroundImg}>
-            <ItemText>
-                <h1>{title}</h1>
-                <p>{description}</p>
-            </ItemText>
+            <Fade bottom>
+                <ItemText>
+                    <h1>{title}</h1>
+                    <p>{description}</p>
+                </ItemText>
+            </Fade>
 
             <Buttons>
-                <ButtonGroup>
-                    <LeftButton>
-                        {leftBtnText}
-                    </LeftButton>
-                    {
-                        rightBtnText && <RightButton>
-                            {rightBtnText}
-                        </RightButton>
-                    }
-                </ButtonGroup>
-                <DownArrow src="/images/down-arrow.svg" />
+                <Fade bottom>
+                    <ButtonGroup>
+                        <LeftButton>
+                            {leftBtnText}
+                        </LeftButton>
+                        {
+                            rightBtnText && <RightButton>
+                                {rightBtnText}
+                            </RightButton>
+                        }
+                    </ButtonGroup>
+                    <DownArrow src="/images/down-arrow.svg" />
+                </Fade>
             </Buttons>
         </Warp>
     );
@@ -44,6 +49,7 @@ const Warp = styled.div`
 const ItemText = styled.div`
     padding-top: 15vh;
     text-align: center;
+    z-index: 10;
     
 `;
 
