@@ -3,18 +3,8 @@ import styled from 'styled-components';
 import Section from '../Section/Section';
 
 const Home = () => {
-    /* const [carInfo, setCarInfo] = useState([]);
-    useEffect(() => {
-        fetch('/carInfo.json')
-            .then(res => res.json())
-            .then(data => setCarInfo(data))
-    }, []) */
     return (
         <Container>
-            {/* {
-                carInfo.map(info => <Section key={info.id} description={info.description} backgroundImg={info.image} leftBtnText="Custom Order"
-                rightBtnText="Existing Inventory"></Section>)
-            } */}
             <Section
                 title="Model S"
                 description="Order Online for Touchless Delivery"
